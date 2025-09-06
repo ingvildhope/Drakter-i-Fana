@@ -1,6 +1,6 @@
 // --- Demo-data ---------------------------------------------------------
 /**
- * Rediger/erstatt denne listen med deres egne kostymer.
+ * Rediger/erstatt denne listen med deres egne drakter.
  * image: kan være en URL eller lokal filsti.
  * status: "available" | "reservert" | "utlaan"
  * type: "individuell" | "par" | "tropp"
@@ -151,7 +151,7 @@ function capitalize(t) { return t ? t.charAt(0).toUpperCase() + t.slice(1) : '';
 function formatNOK(n) { return new Intl.NumberFormat('no-NO', { style: 'currency', currency: 'NOK', maximumFractionDigits: 0 }).format(n); }
 
 function updateStats(items) {
-  statTotal.textContent = `${items.length} kostymer`;
+  statTotal.textContent = `${items.length} drakter`;
   const availableCount = items.filter(i => i.status === 'available').length;
   statAvailable.textContent = `${availableCount} tilgjengelig`;
 }
@@ -211,7 +211,7 @@ function openDialog(item) {
   dlgDesc.textContent = `${item.beskrivelse}\n\nType: ${capitalize(item.type)}\nTilbud: ${capitalize(item.tilbud)}\nPris: ${formatNOK(item.pris)}`;
   reserveBtn.onclick = () => {
     const subject = encodeURIComponent(`Reservasjon: ${item.navn} (${item.id})`);
-    const body = encodeURIComponent(`Hei!\nJeg ønsker å reservere kostymet ${item.navn} (${item.id}).\nØnsket dato: ____\nNavn: ____\nTelefon: ____\n`);
+    const body = encodeURIComponent(`Hei!\nJeg ønsker å reservere drakten ${item.navn} (${item.id}).\nØnsket dato: ____\nNavn: ____\nTelefon: ____\n`);
     window.location.href = `mailto:post@din-klubb.no?subject=${subject}&body=${body}`;
   };
   dlg.showModal();

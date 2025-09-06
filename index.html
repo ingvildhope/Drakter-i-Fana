@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kostymeoversikt</title>
+  <title>Draktoversikt</title>
   <link rel="stylesheet" href="stilark.css" />
 </head>
 <body>
@@ -12,13 +12,13 @@
       <div class="title" aria-label="Tittel og logo">
         <div class="logo" aria-hidden="true"></div>
         <div>
-          <h1>Kostymeoversikt</h1>
-          <p class="subtitle">Bla gjennom og filtrer alle kostymer tilgjengelig i klubben.</p>
+          <h1>Draktoversikt</h1>
+          <p class="subtitle">Bla gjennom og filtrer alle drakter tilgjengelig i klubben.</p>
         </div>
       </div>
 
       <!-- Filter / Søk -->
-      <form id="filterForm" class="toolbar" role="search" aria-label="Filtrer kostymer">
+      <form id="filterForm" class="toolbar" role="search" aria-label="Filtrer drakter">
         <input type="search" id="q" placeholder="Søk navn, tema, farge …" aria-label="Søk" />
         <select id="kategori" aria-label="Kategori">
           <option value="">Alle kategorier</option>
@@ -43,21 +43,21 @@
       </form>
 
       <div class="stats" aria-live="polite">
-        <span class="chip" id="statTotal">0 kostymer</span>
+        <span class="chip" id="statTotal">0 drakter</span>
         <span class="chip" id="statAvailable">0 tilgjengelig</span>
       </div>
     </header>
 
     <!-- Grid -->
-    <section class="grid" id="grid" aria-label="Kostymekort"></section>
+    <section class="grid" id="grid" aria-label="Draktkort"></section>
 
     <footer>
-      <p>Tips: Rediger datafeltet <code>kostymer</code> i <code>app.js</code> for å legge til eller endre kostymer.</p>
+      <p>Tips: Rediger datafeltet <code>drakter</code> i <code>app.js</code> for å legge til eller endre drakter.</p>
     </footer>
   </div>
 
   <!-- Modal for detaljer -->
-  <dialog id="detailDialog" aria-label="Kostymedetaljer">
+  <dialog id="detailDialog" aria-label="Draktdetaljer">
     <div class="modal-head">
       <strong id="dlgTitle">Detaljer</strong>
       <button class="btn" id="dlgClose" type="button" aria-label="Lukk">Lukk</button>
