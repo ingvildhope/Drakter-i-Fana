@@ -7,7 +7,7 @@
  * tilbud: "leie" | "kjøp"
  * pris: tall (NOK)
  */
-const kostymer = [
+const drakter = [
   {
     id: "K-001",
     navn: "Viktoriansk kjole",
@@ -164,7 +164,7 @@ function applyFiltersAndSort() {
   const st = statusSel.value;
   const sort = sortSel ? sortSel.value : '';
 
-  let filtered = kostymer.filter(k => {
+  let filtered = drakter.filter(k => {
     const matchesQuery = !query ||
       k.navn.toLowerCase().includes(query) ||
       k.kategori.toLowerCase().includes(query) ||
@@ -229,5 +229,5 @@ statusSel.addEventListener('change', applyFiltersAndSort);
 if (sortSel) sortSel.addEventListener('change', applyFiltersAndSort);
 
 // --- Init --------------------------------------------------------------
-renderCards(kostymer);
-updateStats(kostymer);
+renderCards(drakter);
+updateStats(drakter);
