@@ -3,6 +3,9 @@
  * Rediger/erstatt denne listen med deres egne kostymer.
  * image: kan være en URL eller lokal filsti.
  * status: "available" | "reservert" | "utlaan"
+ * type: "individuell" | "par" | "tropp"
+ * tilbud: "leie" | "kjøp"
+ * pris: tall (NOK)
  */
 const kostymer = [
   {
@@ -14,7 +17,10 @@ const kostymer = [
     image: "https://images.unsplash.com/photo-1516826957135-700dedea698c?q=80&w=1200&auto=format&fit=crop",
     status: "available",
     tilbehor: ["korsett", "hatt"],
-    beskrivelse: "Detaljert kjole med blonder. Passer 38–40."
+    beskrivelse: "Detaljert kjole med blonder. Passer 38–40.",
+    type: "individuell",
+    tilbud: "leie",
+    pris: 250
   },
   {
     id: "K-002",
@@ -25,7 +31,10 @@ const kostymer = [
     image: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1200&auto=format&fit=crop",
     status: "reservert",
     tilbehor: ["hatt", "belte"],
-    beskrivelse: "Inkluderer skjorte, vest og bukser."
+    beskrivelse: "Inkluderer skjorte, vest og bukser.",
+    type: "par",
+    tilbud: "leie",
+    pris: 400
   },
   {
     id: "K-003",
@@ -36,7 +45,10 @@ const kostymer = [
     image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop",
     status: "available",
     tilbehor: ["briller"],
-    beskrivelse: "Standard labfrakk."
+    beskrivelse: "Standard labfrakk.",
+    type: "individuell",
+    tilbud: "kjøp",
+    pris: 600
   },
   {
     id: "K-004",
@@ -47,7 +59,10 @@ const kostymer = [
     image: "https://images.unsplash.com/photo-1530884698388-509e3973021e?q=80&w=1200&auto=format&fit=crop",
     status: "utlaan",
     tilbehor: ["skulderklaffer"],
-    beskrivelse: "Formell jakke og bukse med detaljer."
+    beskrivelse: "Formell jakke og bukse med detaljer.",
+    type: "tropp",
+    tilbud: "leie",
+    pris: 900
   },
   {
     id: "K-005",
@@ -58,16 +73,20 @@ const kostymer = [
     image: "https://images.unsplash.com/photo-1528712306091-ed0763094c98?q=80&w=1200&auto=format&fit=crop",
     status: "available",
     tilbehor: ["fjærboa"],
-    beskrivelse: "1920-talls stil, frynser og glitter."
+    beskrivelse: "1920-talls stil, frynser og glitter.",
+    type: "individuell",
+    tilbud: "leie",
+    pris: 300
   }
 ];
 
-// --- App logikk -------------------------------------------------------
+// --- Elementreferanser -------------------------------------------------
 const grid = document.getElementById('grid');
 const q = document.getElementById('q');
 const kategori = document.getElementById('kategori');
 const storrelse = document.getElementById('storrelse');
 const statusSel = document.getElementById('status');
+const sortSel = document.getElementById('sort');
 const statTotal = document.getElementById('statTotal');
 const statAvailable = document.getElementById('statAvailable');
 
@@ -82,6 +101,7 @@ const dlgStatus = document.getElementById('dlgStatus');
 const dlgDesc = document.getElementById('dlgDesc');
 const reserveBtn = document.getElementById('reserveBtn');
 
+// --- Rendering ---------------------------------------------------------
 function renderCards(items) {
   grid.innerHTML = '';
   items.forEach(item => {
@@ -104,8 +124,11 @@ function renderCards(items) {
           <span class="status ${item.status}">${labelForStatus(item.status)}</span>
         </div>
         <div class="meta">
-          <span>${item.farger.join(', ')}</span>
+          <span>Farger: ${item.farger.join(', ')}</span>
           <span>Tilbehør: ${item.tilbehor.join(', ')}</span>
+          <span>Type: ${capitalize(item.type)}</span>
+          <span>${capitalize(item.tilbud)}</span>
+          <span>Pris: ${formatNOK(item.pris)}</span>
         </div>
         <div class="actions">
           <button class="btn" data-id="${item.id}">Detaljer</button>
@@ -123,9 +146,9 @@ function labelForStatus(s) {
   return s === 'available' ? 'Tilgjengelig' : s === 'reservert' ? 'Reservert' : 'Utlånt';
 }
 
-function shorten(text, n) {
-  return text.length > n ? text.slice(0, n - 1) + '…' : text;
-}
+function shorten(text, n) { return text.length > n ? text.slice(0, n - 1) + '…' : text; }
+function capitalize(t) { return t ? t.charAt(0).toUpperCase() + t.slice(1) : ''; }
+function formatNOK(n) { return new Intl.NumberFormat('no-NO', { style: 'currency', currency: 'NOK', maximumFractionDigits: 0 }).format(n); }
 
 function updateStats(items) {
   statTotal.textContent = `${items.length} kostymer`;
@@ -133,13 +156,15 @@ function updateStats(items) {
   statAvailable.textContent = `${availableCount} tilgjengelig`;
 }
 
-function applyFilters() {
+// --- Filtrering og sortering ------------------------------------------
+function applyFiltersAndSort() {
   const query = q.value.trim().toLowerCase();
   const cat = kategori.value;
   const size = storrelse.value;
   const st = statusSel.value;
+  const sort = sortSel ? sortSel.value : '';
 
-  const filtered = kostymer.filter(k => {
+  let filtered = kostymer.filter(k => {
     const matchesQuery = !query ||
       k.navn.toLowerCase().includes(query) ||
       k.kategori.toLowerCase().includes(query) ||
@@ -151,10 +176,30 @@ function applyFilters() {
     return matchesQuery && matchesCat && matchesSize && matchesStatus;
   });
 
+  filtered = sortItems(filtered, sort);
   renderCards(filtered);
   updateStats(filtered);
 }
 
+function sortItems(items, sort) {
+  const copy = [...items];
+  switch (sort) {
+    case 'prisAsc':
+      return copy.sort((a, b) => (a.pris ?? Infinity) - (b.pris ?? Infinity));
+    case 'prisDesc':
+      return copy.sort((a, b) => (b.pris ?? -Infinity) - (a.pris ?? -Infinity));
+    case 'type':
+      return copy.sort((a, b) => (a.type || '').localeCompare(b.type || ''));
+    case 'tilbud':
+      // ønsket rekkefølge: leie før kjøp
+      const rank = v => v === 'leie' ? 0 : v === 'kjøp' ? 1 : 2;
+      return copy.sort((a, b) => rank(a.tilbud) - rank(b.tilbud));
+    default:
+      return copy; // ingen sortering
+  }
+}
+
+// --- Dialog ------------------------------------------------------------
 function openDialog(item) {
   dlgTitle.textContent = `${item.navn} (${item.id})`;
   dlgImg.src = item.image; dlgImg.alt = item.navn;
@@ -163,7 +208,7 @@ function openDialog(item) {
   dlgAcc.textContent = item.tilbehor.join(', ');
   dlgStatus.textContent = labelForStatus(item.status);
   dlgStatus.className = `status ${item.status}`;
-  dlgDesc.textContent = item.beskrivelse;
+  dlgDesc.textContent = `${item.beskrivelse}\n\nType: ${capitalize(item.type)}\nTilbud: ${capitalize(item.tilbud)}\nPris: ${formatNOK(item.pris)}`;
   reserveBtn.onclick = () => {
     const subject = encodeURIComponent(`Reservasjon: ${item.navn} (${item.id})`);
     const body = encodeURIComponent(`Hei!\nJeg ønsker å reservere kostymet ${item.navn} (${item.id}).\nØnsket dato: ____\nNavn: ____\nTelefon: ____\n`);
@@ -172,17 +217,17 @@ function openDialog(item) {
   dlg.showModal();
 }
 
-// Lukking av dialog
+// --- Event listeners ---------------------------------------------------
 if (dlgClose) dlgClose.addEventListener('click', () => dlg.close());
 if (dlg) dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
 
-// Re-render ved filterendringer (med liten debounce)
-let t; const onChange = () => { clearTimeout(t); t = setTimeout(applyFilters, 80); };
+let t; const onChange = () => { clearTimeout(t); t = setTimeout(applyFiltersAndSort, 80); };
 q.addEventListener('input', onChange);
-kategori.addEventListener('change', applyFilters);
-storrelse.addEventListener('change', applyFilters);
-statusSel.addEventListener('change', applyFilters);
+kategori.addEventListener('change', applyFiltersAndSort);
+storrelse.addEventListener('change', applyFiltersAndSort);
+statusSel.addEventListener('change', applyFiltersAndSort);
+if (sortSel) sortSel.addEventListener('change', applyFiltersAndSort);
 
-// Init
+// --- Init --------------------------------------------------------------
 renderCards(kostymer);
 updateStats(kostymer);
