@@ -80,7 +80,152 @@ const drakter = [
     type: "Par",
     tilbud: "leie / selge",
     pris: 650
+  },
+  {
+    navn: "Senior par 2023",
+    storrelse: "S",
+    farger: ["blå", "svart"],
+    image: "Bilder/srpar23.jpeg",
+    status: "tilgjengelig",
+    eier: ["Margrete, Sofie"],
+    beskrivelse: "Blå og svarte pardrakter",
+    type: "Par",
+    tilbud: "leie / selge",
+    pris: 650
+  },
+  {
+    navn: "Junior par 2022",
+    storrelse: "S",
+    farger: ["grønn", "gull"],
+    image: "Bilder/jrpar22.jpeg",
+    status: "tilgjengelig",
+    eier: ["Tilda, Goda"],
+    beskrivelse: "Grønne pardrakter med detaljer i gull",
+    type: "Par",
+    tilbud: "leie / selge",
+    pris: 650
+  },
+  {
+    navn: "Senior par 2022",
+    storrelse: "S",
+    farger: ["svart", "blå"],
+    image: "Bilder/srpar22.jpeg",
+    status: "tilgjengelig",
+    eier: ["Nora, Alida"],
+    beskrivelse: "Svarte og blå pardrakter",
+    type: "Par",
+    tilbud: "leie / selge",
+    pris: 650
+  },
+  {
+    navn: "Alida freestyle 2022",
+    storrelse: "S",
+    farger: ["rød", "oransje"],
+    image: "Bilder/alida22.jpeg",
+    status: "ibruk",
+    eier: ["Elida"],
+    beskrivelse: "Rød freestyledrakt med detaljer i oransje",
+    type: "Individuell",
+    tilbud: "leie / selge",
+    pris: 650
+  },
+  {
+    navn: "Alida freestyle 2023",
+    storrelse: "S",
+    farger: ["vinrød", "sølv", "rosa"],
+    image: "Bilder/alida23.jpeg",
+    status: "tilgjengelig",
+    eier: ["Alida"],
+    beskrivelse: "Vinrød freestyledrakt med detaljer i sølv og rosa",
+    type: "Individuell",
+    tilbud: "leie / selge",
+    pris: 650
+  },
+  {
+    navn: "Anna freestyle 2022",
+    storrelse: "S",
+    farger: ["svart", "netting"],
+    image: "Bilder/anna22.jpeg",
+    status: "tilgjengelig",
+    eier: ["Anna"],
+    beskrivelse: "Svart freestyledrakt med detaljer i netting",
+    type: "Individuell",
+    tilbud: "leie / selge",
+    pris: 650
+  },
+  {
+    navn: "Junior par 2019",
+    storrelse: "S",
+    farger: ["hvit", "brun"],
+    image: "Bilder/jrpar19.jpg",
+    status: "tilgjengelig",
+    eier: ["Margrete, Sofie"],
+    beskrivelse: "Hvite og brune pardrakter",
+    type: "Par",
+    tilbud: "leie / selge",
+    pris: 650
+  },
+  {
+    navn: "Margrete freestyle 2022",
+    storrelse: "S",
+    farger: ["blå"],
+    image: "Bilder/margrete22.jpeg",
+    status: "tilgjengelig",
+    eier: ["Margrete"],
+    beskrivelse: "Blå freestyledrakt med fine detaljer",
+    type: "Individuell",
+    tilbud: "leie",
+    pris: 650
+  },
+  {
+    navn: "Margrete freestyle 2023",
+    storrelse: "S",
+    farger: ["grønn", "gull"],
+    image: "Bilder/margrete23.jpeg",
+    status: "tilgjengelig",
+    eier: ["Margrete"],
+    beskrivelse: "Grønn freestyledrakt med detaljer i gull",
+    type: "Individuell",
+    tilbud: "leie",
+    pris: 650
+  },
+  {
+    navn: "Sofie freestyle 2022",
+    storrelse: "S",
+    farger: ["svart", "gull", "bronse"],
+    image: "Bilder/sofie22.jpeg",
+    status: "tilgjengelig",
+    eier: ["Sofie"],
+    beskrivelse: "Svart freestyledrakt med detaljer i gull og bronse",
+    type: "Individuell",
+    tilbud: "leie / selge",
+    pris: 650
+  },
+  {
+    navn: "Sofie freestyle 2023",
+    storrelse: "S",
+    farger: ["svart", "grønn"],
+    image: "Bilder/sofie23.jpeg",
+    status: "tilgjengelig",
+    eier: ["Sofie"],
+    beskrivelse: "Svart freestyledrakt med detaljer i grønn",
+    type: "Individuell",
+    tilbud: "leie / selge",
+    pris: 650
+  },
+  {
+    navn: "Senior tropp 2023",
+    storrelse: "S",
+    farger: ["brun", "rosa"],
+    image: "Bilder/srtropp23.jpeg",
+    status: "tilgjengelig",
+    eier: ["Annabell, Anna, Sofie, Margrete, Alida, Nora, Marie"],
+    beskrivelse: "Brun med ben og detaljer i rosa (7 stk)",
+    type: "Tropp",
+    tilbud: "leie / selge",
+    pris: 650
   }
+  
 ];
 
 // --- Elementreferanser -------------------------------------------------
