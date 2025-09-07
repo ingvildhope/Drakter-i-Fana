@@ -16,7 +16,7 @@ const drakter = [
     image: "Bilder/srtropp24.jpg",
     status: "tilgjengelig",
     eier: ["Ingvild, Anna, Sofie, Margrete, Alida, Nora, Marie"],
-    beskrivelse: "Svart med ben og blonder (7 stk)",
+    beskrivelse: "Svart troppsdrakt med ben og blonder (7 stk)",
     type: "Tropp",
     tilbud: "leie / selge",
     pris: 650
@@ -28,7 +28,7 @@ const drakter = [
     image: "Bilder/srtropp19.jpeg",
     status: "tilgjengelig",
     eier: ["Ingvild, Anna, Sofie, Margrete, Alida, Nora, Sofia"],
-    beskrivelse: "Svart og vinrød (7 stk)",
+    beskrivelse: "Svart og vinrød troppsdrakt (7 stk)",
     type: "Tropp",
     tilbud: "leie / selge",
     pris: 650
@@ -220,7 +220,7 @@ const drakter = [
     image: "Bilder/srtropp23.jpeg",
     status: "tilgjengelig",
     eier: ["Annabell, Anna, Sofie, Margrete, Alida, Nora, Marie"],
-    beskrivelse: "Brun med ben og detaljer i rosa (7 stk)",
+    beskrivelse: "Brun troppsdrakt med ben og detaljer i rosa (7 stk)",
     type: "Tropp",
     tilbud: "leie / selge",
     pris: 650
@@ -316,7 +316,8 @@ function applyFiltersAndSort() {
     const matchesQuery = !query ||
       k.navn.toLowerCase().includes(query) ||
       k.type.toLowerCase().includes(query) ||
-      k.farger.join(' ').toLowerCase().includes(query)
+      k.farger.join(' ').toLowerCase().includes(query) ||
+      k.eier.join(' ').toLowerCase().includes(query)
     const matchesTyp = !typ || k.type === typ;
     const matchesSize = !size || k.storrelse === size;
     const matchesStatus = !st || k.status === st;
