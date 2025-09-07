@@ -38,11 +38,11 @@ jobs:
           rm -rf dist
           mkdir -p dist
           cp index.html dist/
-          cp styles.css dist/
-          cp app.js dist/
+          cp stilark.css dist/
+          cp kode.js dist/
           mkdir -p dist/Bilder
           cp -R Bilder/. dist/Bilder/
-          
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

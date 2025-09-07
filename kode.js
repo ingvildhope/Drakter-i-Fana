@@ -11,7 +11,7 @@
 const drakter = [
   {
     id: "K-001",
-    navn: "Troppsdrakt",
+    navn: "Troppsdrakter",
     storrelse: "S",
     farger: ["svart", "blonder"],
     image: "Bilder/srtropp24.jpeg",
