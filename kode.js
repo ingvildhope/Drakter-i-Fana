@@ -16,7 +16,7 @@ const drakter = [
     image: "Bilder/srtropp24.jpg",
     status: "tilgjengelig",
     eier: ["Ingvild, Anna, Sofie, Margrete, Alida, Nora, Marie"],
-    beskrivelse: "Svart med ben og blonder. 7 stk",
+    beskrivelse: "Svart med ben og blonder (7 stk)",
     type: "Tropp",
     tilbud: "leie / selge",
     pris: 650
@@ -28,7 +28,7 @@ const drakter = [
     image: "Bilder/srtropp19.jpeg",
     status: "tilgjengelig",
     eier: ["Ingvild, Anna, Sofie, Margrete, Alida, Nora, Sofia"],
-    beskrivelse: "Svart og vinrød. 7 stk",
+    beskrivelse: "Svart og vinrød (7 stk)",
     type: "Tropp",
     tilbud: "leie / selge",
     pris: 650
@@ -40,7 +40,7 @@ const drakter = [
     image: "Bilder/sofie24.jpg",
     status: "ibruk",
     eier: ["Sofie"],
-    beskrivelse: "Svart og rosa todelt freestyledrakt.",
+    beskrivelse: "Svart og rosa todelt freestyledrakt",
     type: "Individuell",
     tilbud: "leie / selge",
     pris: 650
@@ -52,7 +52,7 @@ const drakter = [
     image: "Bilder/marie24.jpg",
     status: "tilgjengelig",
     eier: ["Marie"],
-    beskrivelse: "Rød freestyledrakt med detaljer i svart og gull.",
+    beskrivelse: "Rød freestyledrakt med detaljer i svart og gull",
     type: "Individuell",
     tilbud: "Selge",
     pris: 1500
@@ -64,7 +64,7 @@ const drakter = [
     image: "Bilder/alida24.jpg",
     status: "tilgjengelig",
     eier: ["Alida"],
-    beskrivelse: "Grå og svart freestyledrakt.",
+    beskrivelse: "Grå og svart freestyledrakt",
     type: "Individuell",
     tilbud: "leie / selge",
     pris: 650
@@ -76,7 +76,7 @@ const drakter = [
     image: "Bilder/srpar24.jpg",
     status: "tilgjengelig",
     eier: ["Margrete, Sofie"],
-    beskrivelse: "Vinrød pardrakter med detaljer i gull.",
+    beskrivelse: "Vinrød pardrakter med detaljer i gull",
     type: "Par",
     tilbud: "leie / selge",
     pris: 650
