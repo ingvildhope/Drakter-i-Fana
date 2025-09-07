@@ -14,7 +14,7 @@ const drakter = [
     navn: "Troppsdrakt",
     storrelse: "S",
     farger: ["svart", "blonder"],
-    image: "Drakter-i-Fana/Bilder/srtropp24.jpeg",
+    image: "Bilder/srtropp24.jpeg",
     status: "tilgjengelig",
     eier: ["Ingvild, Anna, Sofie, Margrete, Alida, Nora, Marie"],
     beskrivelse: "Svart med ben og blonder",
