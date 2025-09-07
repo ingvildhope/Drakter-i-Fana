@@ -10,8 +10,7 @@
  */
 const drakter = [
   {
-    id: "K-001",
-    navn: "Troppsdrakter",
+    navn: "Senior tropp 2024",
     storrelse: "S",
     farger: ["svart", "blonder"],
     image: "Bilder/srtropp24.jpg",
@@ -23,8 +22,7 @@ const drakter = [
     pris: 650
   },
   {
-    id: "K-002",
-    navn: "Troppsdrakter",
+    navn: "Senior tropp 2024",
     storrelse: "S",
     farger: ["svart", "vinrød"],
     image: "Bilder/srtropp19.jpeg",
@@ -36,8 +34,7 @@ const drakter = [
     pris: 650
   },
   {
-    id: "K-003",
-    navn: "Sofie freestyle 24",
+    navn: "Sofie freestyle 2024",
     storrelse: "S",
     farger: ["svart", "rosa"],
     image: "Bilder/sofie24.jpg",
@@ -49,8 +46,7 @@ const drakter = [
     pris: 650
   },
   {
-    id: "K-004",
-    navn: "Marie freestyle 24",
+    navn: "Marie freestyle 2024",
     storrelse: "S",
     farger: ["rød", "svart", "gull"],
     image: "Bilder/marie24.jpg",
@@ -62,8 +58,7 @@ const drakter = [
     pris: 1500
   },
   {
-    id: "K-005",
-    navn: "Alida freestyle 24",
+    navn: "Alida freestyle 2024",
     storrelse: "S",
     farger: ["svart", "sølv", "grå"],
     image: "Bilder/alida24.jpg",
@@ -75,8 +70,7 @@ const drakter = [
     pris: 650
   },
   {
-    id: "K-006",
-    navn: "Senior par 24",
+    navn: "Senior par 2024",
     storrelse: "S",
     farger: ["vinrød", "gull"],
     image: "Bilder/srpar24.jpg",
@@ -123,7 +117,6 @@ function renderCards(items) {
     card.innerHTML = `
       <div class="thumb">
         <img src="${item.image}" alt="${item.navn}" loading="lazy" />
-        <span class="badge">${item.id}</span>
       </div>
       <div class="body">
         <div class="title-row">
@@ -141,7 +134,7 @@ function renderCards(items) {
           <span>Pris: ${formatNOK(item.pris)}</span>
         </div>
         <div class="actions">
-          <button class="btn" data-id="${item.id}">Detaljer</button>
+          <button class="btn">Detaljer</button>
           <small class="muted">${shorten(item.beskrivelse, 60)}</small>
         </div>
       </div>
@@ -178,8 +171,7 @@ function applyFiltersAndSort() {
     const matchesQuery = !query ||
       k.navn.toLowerCase().includes(query) ||
       k.type.toLowerCase().includes(query) ||
-      k.farger.join(' ').toLowerCase().includes(query) ||
-      k.id.toLowerCase().includes(query);
+      k.farger.join(' ').toLowerCase().includes(query)
     const matchesTyp = !typ || k.type === typ;
     const matchesSize = !size || k.storrelse === size;
     const matchesStatus = !st || k.status === st;
@@ -198,8 +190,6 @@ function sortItems(items, sort) {
       return copy.sort((a, b) => (a.pris ?? Infinity) - (b.pris ?? Infinity));
     case 'prisDesc':
       return copy.sort((a, b) => (b.pris ?? -Infinity) - (a.pris ?? -Infinity));
-    case 'type':
-      return copy.sort((a, b) => (a.type || '').localeCompare(b.type || ''));
     case 'tilbud':
       // ønsket rekkefølge: leie før kjøp
       const rank = v => v === 'leie' ? 0 : v === 'kjøp' ? 1 : 2;
@@ -211,7 +201,7 @@ function sortItems(items, sort) {
 
 // --- Dialog ------------------------------------------------------------
 function openDialog(item) {
-  dlgTitle.textContent = `${item.navn} (${item.id})`;
+  dlgTitle.textContent = `${item.navn}`;
   dlgImg.src = item.image; dlgImg.alt = item.navn;
   dlgSize.textContent = item.storrelse;
   dlgTyp.textContent = item.type;
