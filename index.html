@@ -12,7 +12,7 @@
       <div class="title" aria-label="Tittel og logo">
         <div class="logo" aria-hidden="true"></div>
         <div>
-          <h1>Draktoversikt</h1>
+          <h1>Drakter i Fana</h1>
           <p class="subtitle">Bla gjennom og filtrer alle drakter tilgjengelig i klubben.</p>
         </div>
       </div>
@@ -20,8 +20,8 @@
       <!-- Filter / Søk -->
       <form id="filterForm" class="toolbar" role="search" aria-label="Filtrer drakter">
         <input type="search" id="q" placeholder="Søk navn, tema, farge …" aria-label="Søk" />
-        <select id="kategori" aria-label="Kategori">
-          <option value="">Alle kategorier</option>
+        <select id="type" aria-label="Type">
+          <option value="">Alle typer</option>
           <option>Individuell</option>
           <option>Par</option>
           <option>Tropp</option>
@@ -36,15 +36,21 @@
         </select>
         <select id="status" aria-label="Status">
           <option value="">Alle statuser</option>
-          <option value="available">Tilgjengelig</option>
-          <option value="reservert">Reservert</option>
-          <option value="utlaan">Utlånt</option>
+          <option value="tilgjengelig">Tilgjengelig</option>
+          <option value="ibruk">I bruk</option>
+        </select>
+        <select id="sort" aria-label="Sorter">
+          <option value="">Sorter etter…</option>
+          <option value="prisAsc">Pris (lav → høy)</option>
+          <option value="prisDesc">Pris (høy → lav)</option>
+          <option value="type">Type (individ/par/tropp)</option>
+          <option value="tilbud">Tilbud (leie/kjøp)</option>
         </select>
       </form>
 
       <div class="stats" aria-live="polite">
         <span class="chip" id="statTotal">0 drakter</span>
-        <span class="chip" id="statAvailable">0 tilgjengelig</span>
+        <span class="chip" id="statTilgjengelig">0 tilgjengelig</span>
       </div>
     </header>
 
@@ -52,8 +58,16 @@
     <section class="grid" id="grid" aria-label="Draktkort"></section>
 
     <footer>
-      <p>Tips: Rediger datafeltet <code>drakter</code> i <code>app.js</code> for å legge til eller endre drakter.</p>
+      <section class="contact-box" aria-label="Kontaktinformasjon">
+        <strong>Kontakt</strong>
+        <div class="contact-grid">
+          <div><span>E-post:</span> <span>ingvildhrh@gmail.com</span></div>
+          <div><span>Telefon:</span> <span>+47 986 70 320</span></div>
+        </div>
+        <p class="muted">Ta kontakt for oppdatering av eierskap / tilgjengelighet / endring i pris / andre spørsmål</p>
+      </section>
     </footer>
+
   </div>
 
   <!-- Modal for detaljer -->
@@ -65,14 +79,13 @@
     <div class="modal-body">
       <img id="dlgImg" alt="" />
       <div class="modal-meta">
-        <div><strong>Størrelse:</strong> <span id="dlgSize"></span></div>
-        <div><strong>Kategori:</strong> <span id="dlgCat"></span></div>
-        <div><strong>Tilbehør:</strong> <span id="dlgAcc"></span></div>
         <div><strong>Status:</strong> <span id="dlgStatus" class="status"></span></div>
+        <div><strong>Type:</strong> <span id="dlgTyp"></span></div>
+        <div><strong>Pris:</strong> <span id="dlgPrice"></span></div>
+        <div><strong>Eier:</strong> <span id="dlgOwn"></span></div>
+        <div><strong>Tilbud:</strong> <span id="dlgOff"></span></div>
+        <div><strong>Størrelse:</strong> <span id="dlgSize"></span></div>
         <div><strong>Beskrivelse:</strong><br><span id="dlgDesc"></span></div>
-        <div>
-          <button class="btn" id="reserveBtn" type="button">Forespør reservasjon</button>
-        </div>
       </div>
     </div>
   </dialog>

@@ -5,9 +5,11 @@
   --text: #e5e7eb;      /* gray-200 */
   --accent: #22d3ee;    /* cyan-400 */
   --accent-2: #a78bfa;  /* violet-400 */
+  --accent-3: #e21818;    /* cyan-400 */
+  --accent-4: #740606;  /* violet-400 */
   --ok: #34d399;        /* green-400 */
   --warn: #fbbf24;      /* amber-400 */
-  --danger: #f87171;    /* red-400 */
+  --danger: #ec5454;    /* red-400 */
   --radius: 16px;
   --shadow: 0 10px 25px rgba(0,0,0,.35);
 }
@@ -42,7 +44,7 @@ header {
 
 .logo {
   width: 42px; height: 42px; border-radius: 12px;
-  background: radial-gradient(circle at 30% 30%, var(--accent), var(--accent-2));
+  background: radial-gradient(circle at 30% 30%, var(--accent-3), var(--accent-4));
   box-shadow: var(--shadow);
 }
 
@@ -127,9 +129,8 @@ p.subtitle { margin: 0; color: var(--muted); }
 .status {
   font-size: 12px; padding: 6px 8px; border-radius: 8px; border: 1px solid rgba(255,255,255,.1);
 }
-.status.available { color: #052e1a; background: linear-gradient(180deg, rgba(52,211,153,.9), rgba(52,211,153,.2)); }
-.status.reservert { color: #3a2605; background: linear-gradient(180deg, rgba(251,191,36,.9), rgba(251,191,36,.2)); }
-.status.utlaan { color: #3a0b0b; background: linear-gradient(180deg, rgba(248,113,113,.9), rgba(248,113,113,.2)); }
+.status.tilgjengelig { color: #052e1a; background: linear-gradient(180deg, rgba(52,211,153,.9), rgba(52,211,153,.2)); }
+.status.ibruk { color: #3a0b0b; background: linear-gradient(180deg, rgba(248,113,113,.9), rgba(248,113,113,.2)); }
 
 footer { color: var(--muted); font-size: 13px; margin: 24px 0 40px; text-align: center; }
 

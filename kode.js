@@ -2,37 +2,36 @@
 /**
  * Rediger/erstatt denne listen med deres egne drakter.
  * image: kan være en URL eller lokal filsti.
- * status: "available" | "reservert" | "utlaan"
+ * status: "tilgjengelig" | "ibruk"
  * type: "individuell" | "par" | "tropp"
  * tilbud: "leie" | "kjøp"
  * pris: tall (NOK)
+ * eier: "navn"
  */
 const drakter = [
   {
     id: "K-001",
-    navn: "Viktoriansk kjole",
-    storrelse: "M",
-    kategori: "Par",
-    farger: ["burgunder", "krem"],
-    image: "https://images.unsplash.com/photo-1516826957135-700dedea698c?q=80&w=1200&auto=format&fit=crop",
-    status: "available",
-    tilbehor: ["korsett", "hatt"],
-    beskrivelse: "Detaljert kjole med blonder. Passer 38–40.",
-    type: "individuell",
-    tilbud: "leie",
-    pris: 250
+    navn: "Troppsdrakt",
+    storrelse: "S",
+    farger: ["svart", "blonder"],
+    image: "/Users/ingvild/Sportsdrill/Drakter-i-Fana/Bilder/srtropp24.jpeg",
+    status: "tilgjengelig",
+    eier: ["Ingvild, Anna, Sofie, Margrete, Alida, Nora, Marie"],
+    beskrivelse: "Svart med ben og blonder",
+    type: "Tropp (7)",
+    tilbud: "leie / selge",
+    pris: 650
   },
   {
     id: "K-002",
     navn: "Piratsuite",
     storrelse: "L",
-    kategori: "Tropp",
     farger: ["svart", "brun"],
     image: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1200&auto=format&fit=crop",
-    status: "reservert",
-    tilbehor: ["hatt", "belte"],
+    status: "ibruk",
+    eier: ["Margrete"],
     beskrivelse: "Inkluderer skjorte, vest og bukser.",
-    type: "par",
+    type: "Par",
     tilbud: "leie",
     pris: 400
   },
@@ -40,13 +39,12 @@ const drakter = [
     id: "K-003",
     navn: "Labfrakk",
     storrelse: "S",
-    kategori: "Individuell",
     farger: ["hvit"],
     image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop",
-    status: "available",
-    tilbehor: ["briller"],
+    status: "tilgjengelig",
+    eier: ["Sofie"],
     beskrivelse: "Standard labfrakk.",
-    type: "individuell",
+    type: "Individuell",
     tilbud: "kjøp",
     pris: 600
   },
@@ -54,13 +52,12 @@ const drakter = [
     id: "K-004",
     navn: "Uniform – Kaptein",
     storrelse: "XL",
-    kategori: "Par",
     farger: ["marine", "gull"],
     image: "https://images.unsplash.com/photo-1530884698388-509e3973021e?q=80&w=1200&auto=format&fit=crop",
-    status: "utlaan",
-    tilbehor: ["skulderklaffer"],
+    status: "ibruk",
+    eier: ["Anna"],
     beskrivelse: "Formell jakke og bukse med detaljer.",
-    type: "tropp",
+    type: "Tropp (6)",
     tilbud: "leie",
     pris: 900
   },
@@ -68,13 +65,12 @@ const drakter = [
     id: "K-005",
     navn: "Charleston-kjole",
     storrelse: "M",
-    kategori: "Tropp",
     farger: ["svart", "sølv"],
     image: "https://images.unsplash.com/photo-1528712306091-ed0763094c98?q=80&w=1200&auto=format&fit=crop",
-    status: "available",
-    tilbehor: ["fjærboa"],
+    status: "tilgjengelig",
+    eier: ["Annabell"],
     beskrivelse: "1920-talls stil, frynser og glitter.",
-    type: "individuell",
+    type: "Individuell",
     tilbud: "leie",
     pris: 300
   }
@@ -83,23 +79,24 @@ const drakter = [
 // --- Elementreferanser -------------------------------------------------
 const grid = document.getElementById('grid');
 const q = document.getElementById('q');
-const kategori = document.getElementById('kategori');
+const type = document.getElementById('type');
 const storrelse = document.getElementById('storrelse');
 const statusSel = document.getElementById('status');
 const sortSel = document.getElementById('sort');
 const statTotal = document.getElementById('statTotal');
-const statAvailable = document.getElementById('statAvailable');
+const statTilgjengelig = document.getElementById('statTilgjengelig');
 
 const dlg = document.getElementById('detailDialog');
 const dlgClose = document.getElementById('dlgClose');
 const dlgTitle = document.getElementById('dlgTitle');
 const dlgImg = document.getElementById('dlgImg');
 const dlgSize = document.getElementById('dlgSize');
-const dlgCat = document.getElementById('dlgCat');
-const dlgAcc = document.getElementById('dlgAcc');
+const dlgTyp = document.getElementById('dlgTyp');
+const dlgOwn = document.getElementById('dlgOwn');
+const dlgPrice = document.getElementById('dlgPrice');
+const dlgOff = document.getElementById('dlgOff');
 const dlgStatus = document.getElementById('dlgStatus');
 const dlgDesc = document.getElementById('dlgDesc');
-const reserveBtn = document.getElementById('reserveBtn');
 
 // --- Rendering ---------------------------------------------------------
 function renderCards(items) {
@@ -119,15 +116,15 @@ function renderCards(items) {
         <div class="title-row">
           <div>
             <div class="name">${item.navn}</div>
-            <div class="size">Str. ${item.storrelse} • ${item.kategori}</div>
+            <div class="size">Str. ${item.storrelse} • ${item.type}</div>
           </div>
           <span class="status ${item.status}">${labelForStatus(item.status)}</span>
         </div>
         <div class="meta">
           <span>Farger: ${item.farger.join(', ')}</span>
-          <span>Tilbehør: ${item.tilbehor.join(', ')}</span>
+          <span>Eier: ${item.eier.join(', ')}</span>
           <span>Type: ${capitalize(item.type)}</span>
-          <span>${capitalize(item.tilbud)}</span>
+          <span>Tilbud: ${capitalize(item.tilbud)}</span>
           <span>Pris: ${formatNOK(item.pris)}</span>
         </div>
         <div class="actions">
@@ -143,7 +140,7 @@ function renderCards(items) {
 }
 
 function labelForStatus(s) {
-  return s === 'available' ? 'Tilgjengelig' : s === 'reservert' ? 'Reservert' : 'Utlånt';
+  return s === 'tilgjengelig' ? 'Tilgjengelig' : s === 'ibruk' ? 'I bruk' : 'Utlånt';
 }
 
 function shorten(text, n) { return text.length > n ? text.slice(0, n - 1) + '…' : text; }
@@ -152,14 +149,14 @@ function formatNOK(n) { return new Intl.NumberFormat('no-NO', { style: 'currency
 
 function updateStats(items) {
   statTotal.textContent = `${items.length} drakter`;
-  const availableCount = items.filter(i => i.status === 'available').length;
-  statAvailable.textContent = `${availableCount} tilgjengelig`;
+  const tilgjengeligCount = items.filter(i => i.status === 'tilgjengelig').length;
+  statTilgjengelig.textContent = `${tilgjengeligCount} tilgjengelig`;
 }
 
 // --- Filtrering og sortering ------------------------------------------
 function applyFiltersAndSort() {
   const query = q.value.trim().toLowerCase();
-  const cat = kategori.value;
+  const typ = type.value;
   const size = storrelse.value;
   const st = statusSel.value;
   const sort = sortSel ? sortSel.value : '';
@@ -167,13 +164,13 @@ function applyFiltersAndSort() {
   let filtered = drakter.filter(k => {
     const matchesQuery = !query ||
       k.navn.toLowerCase().includes(query) ||
-      k.kategori.toLowerCase().includes(query) ||
+      k.type.toLowerCase().includes(query) ||
       k.farger.join(' ').toLowerCase().includes(query) ||
       k.id.toLowerCase().includes(query);
-    const matchesCat = !cat || k.kategori === cat;
+    const matchesTyp = !typ || k.type === typ;
     const matchesSize = !size || k.storrelse === size;
     const matchesStatus = !st || k.status === st;
-    return matchesQuery && matchesCat && matchesSize && matchesStatus;
+    return matchesQuery && matchesTyp && matchesSize && matchesStatus;
   });
 
   filtered = sortItems(filtered, sort);
@@ -204,17 +201,20 @@ function openDialog(item) {
   dlgTitle.textContent = `${item.navn} (${item.id})`;
   dlgImg.src = item.image; dlgImg.alt = item.navn;
   dlgSize.textContent = item.storrelse;
-  dlgCat.textContent = item.kategori;
-  dlgAcc.textContent = item.tilbehor.join(', ');
+  dlgTyp.textContent = item.type;
+  dlgOwn.textContent = item.eier.join(', ');
+  dlgPrice.textContent = `${formatNOK(item.pris)}`;
+  dlgOff.textContent = item.tilbud;
   dlgStatus.textContent = labelForStatus(item.status);
   dlgStatus.className = `status ${item.status}`;
-  dlgDesc.textContent = `${item.beskrivelse}\n\nType: ${capitalize(item.type)}\nTilbud: ${capitalize(item.tilbud)}\nPris: ${formatNOK(item.pris)}`;
-  reserveBtn.onclick = () => {
-    const subject = encodeURIComponent(`Reservasjon: ${item.navn} (${item.id})`);
-    const body = encodeURIComponent(`Hei!\nJeg ønsker å reservere drakten ${item.navn} (${item.id}).\nØnsket dato: ____\nNavn: ____\nTelefon: ____\n`);
-    window.location.href = `mailto:ingvildhrh@gmail.com?subject=${subject}&body=${body}`;
-  };
-  dlg.showModal();
+  dlgDesc.textContent = `${item.beskrivelse}\n`;
+
+  // Åpne modalen (med fallback for nettlesere uten showModal)
+  if (typeof dlg.showModal === 'function') {
+    dlg.showModal();
+  } else {
+    dlg.setAttribute('open', '');
+  }
 }
 
 // --- Event listeners ---------------------------------------------------
@@ -223,7 +223,7 @@ if (dlg) dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(
 
 let t; const onChange = () => { clearTimeout(t); t = setTimeout(applyFiltersAndSort, 80); };
 q.addEventListener('input', onChange);
-kategori.addEventListener('change', applyFiltersAndSort);
+type.addEventListener('change', applyFiltersAndSort);
 storrelse.addEventListener('change', applyFiltersAndSort);
 statusSel.addEventListener('change', applyFiltersAndSort);
 if (sortSel) sortSel.addEventListener('change', applyFiltersAndSort);
