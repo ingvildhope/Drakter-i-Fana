@@ -212,7 +212,7 @@ function openDialog(item) {
   reserveBtn.onclick = () => {
     const subject = encodeURIComponent(`Reservasjon: ${item.navn} (${item.id})`);
     const body = encodeURIComponent(`Hei!\nJeg ønsker å reservere drakten ${item.navn} (${item.id}).\nØnsket dato: ____\nNavn: ____\nTelefon: ____\n`);
-    window.location.href = `mailto:post@din-klubb.no?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:ingvildhrh@gmail.com?subject=${subject}&body=${body}`;
   };
   dlg.showModal();
 }
