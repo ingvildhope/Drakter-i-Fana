@@ -1,6 +1,5 @@
-// --- Demo-data ---------------------------------------------------------
+// --- Data ---------------------------------------------------------
 /**
- * Rediger/erstatt denne listen med deres egne drakter.
  * image: kan være en URL eller lokal filsti.
  * status: "tilgjengelig" | "ibruk"
  * type: "individuell" | "par" | "tropp"
@@ -337,11 +336,10 @@ function sortItems(items, sort) {
     case 'prisDesc':
       return copy.sort((a, b) => (b.pris ?? -Infinity) - (a.pris ?? -Infinity));
     case 'tilbud':
-      // ønsket rekkefølge: leie før kjøp
       const rank = v => v === 'leie' ? 0 : v === 'kjøp' ? 1 : 2;
       return copy.sort((a, b) => rank(a.tilbud) - rank(b.tilbud));
     default:
-      return copy; // ingen sortering
+      return copy;
   }
 }
 
@@ -358,7 +356,6 @@ function openDialog(item) {
   dlgStatus.className = `status ${item.status}`;
   dlgDesc.textContent = `${item.beskrivelse}\n`;
 
-  // Åpne modalen (med fallback for nettlesere uten showModal)
   if (typeof dlg.showModal === 'function') {
     dlg.showModal();
   } else {
