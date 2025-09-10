@@ -2,7 +2,7 @@
 /**
  * image: kan være en URL eller lokal filsti.
  * status: "tilgjengelig" | "ibruk"
- * type: "individuell" | "par" | "tropp"
+ * type: "freestyle" | "par" | "tropp" | "oblig" | "one baton"
  * tilbud: "leie" | "kjøp"
  * pris: tall (NOK)
  * eier: "navn"
@@ -40,7 +40,7 @@ const drakter = [
     status: "ibruk",
     eier: ["Sofie"],
     beskrivelse: "Svart og rosa todelt freestyledrakt",
-    type: "Individuell",
+    type: "freestyle",
     tilbud: "leie / selge",
     pris: 650
   },
@@ -52,9 +52,9 @@ const drakter = [
     status: "tilgjengelig",
     eier: ["Marie"],
     beskrivelse: "Rød freestyledrakt med detaljer i svart og gull",
-    type: "Individuell",
+    type: "freestyle",
     tilbud: "Selge",
-    pris: 1500
+    pris: 10000
   },
   {
     navn: "Alida freestyle 2024",
@@ -64,7 +64,7 @@ const drakter = [
     status: "tilgjengelig",
     eier: ["Alida"],
     beskrivelse: "Grå og svart freestyledrakt",
-    type: "Individuell",
+    type: "freestyle",
     tilbud: "leie / selge",
     pris: 650
   },
@@ -85,7 +85,7 @@ const drakter = [
     storrelse: "S",
     farger: ["blå", "svart"],
     image: "Bilder/srpar23.jpeg",
-    status: "tilgjengelig",
+    status: "ibruk",
     eier: ["Margrete, Sofie"],
     beskrivelse: "Blå og svarte pardrakter",
     type: "Par",
@@ -97,7 +97,7 @@ const drakter = [
     storrelse: "S",
     farger: ["grønn", "gull"],
     image: "Bilder/jrpar22.jpeg",
-    status: "tilgjengelig",
+    status: "ibruk",
     eier: ["Tilda, Goda"],
     beskrivelse: "Grønne pardrakter med detaljer i gull",
     type: "Par",
@@ -124,7 +124,7 @@ const drakter = [
     status: "ibruk",
     eier: ["Elida"],
     beskrivelse: "Rød freestyledrakt med detaljer i oransje",
-    type: "Individuell",
+    type: "freestyle",
     tilbud: "leie / selge",
     pris: 650
   },
@@ -136,7 +136,7 @@ const drakter = [
     status: "tilgjengelig",
     eier: ["Alida"],
     beskrivelse: "Vinrød freestyledrakt med detaljer i sølv og rosa",
-    type: "Individuell",
+    type: "freestyle",
     tilbud: "leie / selge",
     pris: 650
   },
@@ -148,7 +148,7 @@ const drakter = [
     status: "tilgjengelig",
     eier: ["Anna"],
     beskrivelse: "Svart freestyledrakt med detaljer i netting",
-    type: "Individuell",
+    type: "freestyle",
     tilbud: "leie / selge",
     pris: 650
   },
@@ -172,7 +172,7 @@ const drakter = [
     status: "tilgjengelig",
     eier: ["Margrete"],
     beskrivelse: "Blå freestyledrakt med fine detaljer",
-    type: "Individuell",
+    type: "freestyle",
     tilbud: "leie",
     pris: 650
   },
@@ -184,7 +184,7 @@ const drakter = [
     status: "tilgjengelig",
     eier: ["Margrete"],
     beskrivelse: "Grønn freestyledrakt med detaljer i gull",
-    type: "Individuell",
+    type: "freestyle",
     tilbud: "leie",
     pris: 650
   },
@@ -196,7 +196,7 @@ const drakter = [
     status: "tilgjengelig",
     eier: ["Sofie"],
     beskrivelse: "Svart freestyledrakt med detaljer i gull og bronse",
-    type: "Individuell",
+    type: "freestyle",
     tilbud: "leie / selge",
     pris: 650
   },
@@ -208,7 +208,7 @@ const drakter = [
     status: "tilgjengelig",
     eier: ["Sofie"],
     beskrivelse: "Svart freestyledrakt med detaljer i grønn",
-    type: "Individuell",
+    type: "freestyle",
     tilbud: "leie / selge",
     pris: 650
   },
