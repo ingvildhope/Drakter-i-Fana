@@ -231,7 +231,7 @@ const drakter = [
 const grid = document.getElementById('grid');
 const q = document.getElementById('q');
 const type = document.getElementById('type');
-const storrelse = document.getElementById('storrelse');
+//const storrelse = document.getElementById('storrelse');
 const statusSel = document.getElementById('status');
 const sortSel = document.getElementById('sort');
 const statTotal = document.getElementById('statTotal');
@@ -266,7 +266,7 @@ function renderCards(items) {
         <div class="title-row">
           <div>
             <div class="name">${item.navn}</div>
-            <div class="size">Str. ${item.storrelse} • ${item.type}</div>
+            <!--<div class="size">Str. ${item.storrelse} • ${item.type}</div>-->
           </div>
           <span class="status ${item.status}">${labelForStatus(item.status)}</span>
         </div>
@@ -307,7 +307,7 @@ function updateStats(items) {
 function applyFiltersAndSort() {
   const query = q.value.trim().toLowerCase();
   const typ = type.value;
-  const size = storrelse.value;
+  //const size = storrelse.value;
   const st = statusSel.value;
   const sort = sortSel ? sortSel.value : '';
 
@@ -318,7 +318,7 @@ function applyFiltersAndSort() {
       k.farger.join(' ').toLowerCase().includes(query) ||
       k.eier.join(' ').toLowerCase().includes(query)
     const matchesTyp = !typ || k.type === typ;
-    const matchesSize = !size || k.storrelse === size;
+    //const matchesSize = !size || k.storrelse === size;
     const matchesStatus = !st || k.status === st;
     return matchesQuery && matchesTyp && matchesSize && matchesStatus;
   });
@@ -347,7 +347,7 @@ function sortItems(items, sort) {
 function openDialog(item) {
   dlgTitle.textContent = `${item.navn}`;
   dlgImg.src = item.image; dlgImg.alt = item.navn;
-  dlgSize.textContent = item.storrelse;
+  //dlgSize.textContent = item.storrelse;
   dlgTyp.textContent = item.type;
   dlgOwn.textContent = item.eier.join(', ');
   dlgPrice.textContent = `${formatNOK(item.pris)}`;
@@ -370,7 +370,7 @@ if (dlg) dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(
 let t; const onChange = () => { clearTimeout(t); t = setTimeout(applyFiltersAndSort, 80); };
 q.addEventListener('input', onChange);
 type.addEventListener('change', applyFiltersAndSort);
-storrelse.addEventListener('change', applyFiltersAndSort);
+//storrelse.addEventListener('change', applyFiltersAndSort);
 statusSel.addEventListener('change', applyFiltersAndSort);
 if (sortSel) sortSel.addEventListener('change', applyFiltersAndSort);
 
