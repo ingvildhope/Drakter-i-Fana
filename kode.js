@@ -69,8 +69,8 @@ function renderCards(items) {
         <div class="meta">
           <span>Farger: ${item.farger.join(', ')}</span>
           <span>Eier: ${item.eier.join(', ')}</span>
-          <span>Type: ${capitalize(item.type)}</span>
-          <span>Tilbud: ${capitalize(item.tilbud)}</span>
+          <span class="capitalize">Type: ${item.type}</span>
+          <span class="capitalize">Tilbud: ${item.tilbud}</span>
           <span>Pris: ${item.pris}</span>
         </div>
         <div class="actions">

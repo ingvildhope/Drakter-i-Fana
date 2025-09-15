@@ -127,6 +127,9 @@ p.subtitle { margin: 0; color: var(--muted); }
 .name { font-weight: 700; }
 .size { font-size: 14px; color: var(--muted); }
 .meta { font-size: 12px; color: var(--muted); display: flex; gap: 10px; flex-wrap: wrap; }
+.capitalize {
+  text-transform: capitalize;
+}
 
 .actions {
   display: flex;

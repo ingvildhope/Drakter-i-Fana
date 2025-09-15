@@ -12,6 +12,18 @@
     "pris": "650 / ? kr"
   },
   {
+    "navn": "Senior tropp 2022",
+    "storrelse": "S",
+    "farger": ["blå", "blomster"],
+    "image": "Bilder/srtropp22.jpeg",
+    "status": "tilgjengelig",
+    "eier": ["Ingvild", "Anna", "Silje", "Margrete", "Alida", "Nora", "Annabell"],
+    "beskrivelse": "Blå troppsdrakt med mørkeblå blomster (7 stk)",
+    "type": "Tropp",
+    "tilbud": "leie / selge",
+    "pris": "650 / ? kr"
+  },
+  {
     "navn": "Senior tropp 2024",
     "storrelse": "S",
     "farger": ["svart", "vinrød"],
@@ -70,6 +82,18 @@
     "type": "Par",
     "tilbud": "leie / selge",
     "pris": "650 / ? kr"
+  },
+  {
+    "navn": "Senior par EC 2022",
+    "storrelse": "S",
+    "farger": ["grønn", "svart"],
+    "image": "Bilder/srparec22.jpeg",
+    "status": "tilgjengelig",
+    "eier": ["Ingvild", "Anna"],
+    "beskrivelse": "Grønne og svarte pardrakter ",
+    "type": "Par",
+    "tilbud": "leie",
+    "pris": "650 kr"
   },
   {
     "navn": "Senior par 2023",
@@ -149,11 +173,11 @@
     "farger": ["hvit", "brun"],
     "image": "Bilder/jrpar19.jpg",
     "status": "tilgjengelig",
-    "eier": ["Margrete", "Sofie"],
+    "eier": ["Mina", "Tilda"],
     "beskrivelse": "Hvite og brune pardrakter",
     "type": "Par",
-    "tilbud": "leie / selge",
-    "pris": "650 / ? kr"
+    "tilbud": "leie",
+    "pris": "650 kr"
   },
   {
     "navn": "Margrete freestyle 2022",
@@ -214,5 +238,173 @@
     "type": "Tropp",
     "tilbud": "leie / selge",
     "pris": "650 / ? kr"
+  },
+  {
+    "navn": "Junior tropp 2018",
+    "storrelse": "S",
+    "farger": ["rosa", "blå", "lilla"],
+    "image": "Bilder/jrtropp18.jpeg",
+    "status": "tilgjengelig",
+    "eier": ["Ingvild", "Anna", "Mina", "Margrete", "Alida", "Nora"],
+    "beskrivelse": "Blå, lilla og rosa troppsdrakt med speil (6 stk)",
+    "type": "Tropp",
+    "tilbud": "?",
+    "pris": "? kr"
+  },
+  {
+    "navn": "Junior tropp 2024",
+    "storrelse": "S",
+    "farger": ["grønn", "rosa"],
+    "image": "Bilder/jrtropp24.jpeg",
+    "status": "tilgjengelig",
+    "eier": ["Mina", "Nicoline", "Sunniva", "Mia", "Louise", "Nora?", "Hanne", "Milla"],
+    "beskrivelse": "Grønn og rosa troppsdrakt (8 stk)",
+    "type": "Tropp",
+    "tilbud": "?",
+    "pris": "? kr"
+  },
+  {
+    "navn": "Mina oblig 1",
+    "storrelse": "S",
+    "farger": ["svart"],
+    "image": "Bilder/minaoblig1.jpeg",
+    "status": "tilgjengelig",
+    "eier": ["Mina"],
+    "beskrivelse": "Svart obligdrakt, liten str",
+    "type": "Oblig",
+    "tilbud": "selge",
+    "pris": "150 kr"
+  },
+  {
+    "navn": "Mina og Milla par 2024",
+    "storrelse": "S",
+    "farger": ["blå"],
+    "image": "Bilder/minapar1.jpeg",
+    "status": "tilgjengelig",
+    "eier": ["Mina", "Milla"],
+    "beskrivelse": "Blå pardrakter med høy hals",
+    "type": "Par",
+    "tilbud": "selge",
+    "pris": "500 kr"
+  },
+  {
+    "navn": "Mina og ? par ?",
+    "storrelse": "S",
+    "farger": ["grønn", "gull"],
+    "image": "Bilder/minapar2.jpeg",
+    "status": "tilgjengelig",
+    "eier": ["Mina", "?"],
+    "beskrivelse": "Grønne pardrakter med detaljer i gull",
+    "type": "Par",
+    "tilbud": "selge",
+    "pris": "500 kr"
+  },
+  {
+    "navn": "Rosa freestyle",
+    "storrelse": "S",
+    "farger": ["rosa"],
+    "image": "Bilder/rosafana.jpeg",
+    "status": "tilgjengelig",
+    "eier": ["Klubben"],
+    "beskrivelse": "Rosa freestyledrakt eid av klubben, liten str",
+    "type": "Freestyle",
+    "tilbud": "låne",
+    "pris": "-"
+  },
+  {
+    "navn": "Rekrutt tropp 2024",
+    "storrelse": "S",
+    "farger": ["grønn"],
+    "image": "Bilder/rekruttropp24.jpeg",
+    "status": "tilgjengelig",
+    "eier": ["Nora (L)", "Annabella", "Olea", "Synne", "Lilli"],
+    "beskrivelse": "Grønn troppsdrakt (5 stk)",
+    "type": "Tropp",
+    "tilbud": "selge",
+    "pris": "500 kr"
+  },
+  {
+    "navn": "Rekrutt tropp 2025",
+    "storrelse": "S",
+    "farger": ["svart", "oransje"],
+    "image": "Bilder/rekruttropp25.jpeg",
+    "status": "tilgjengelig",
+    "eier": ["Ingrid", "Annabella", "Olea", "Synne", "Lilli", "Emilia", "Mathilde Kanutte"],
+    "beskrivelse": "Svart troppsdrakt med detaljer i oransje (7 stk)",
+    "type": "Tropp",
+    "tilbud": "?",
+    "pris": "? kr"
+  },
+  {
+    "navn": "Rekrutt tropp 2016",
+    "storrelse": "S",
+    "farger": ["blå", "rosa", "beige"],
+    "image": "Bilder/rekruttropp16.jpeg",
+    "status": "tilgjengelig",
+    "eier": ["Sofie?", "Olea", "Lise?", "Jinni?", "Filippa?"],
+    "beskrivelse": "Blå og beige troppsdrakt med detaljer i rosa (4 stk)",
+    "type": "Tropp",
+    "tilbud": "?",
+    "pris": "? kr"
+  },
+  {
+    "navn": "Annabella freestyle 2024",
+    "storrelse": "S",
+    "farger": ["svart"],
+    "image": "Bilder/annabella24.jpeg",
+    "status": "tilgjengelig",
+    "eier": ["Annabella"],
+    "beskrivelse": "Svart freestyledrakt med frynser, liten str",
+    "type": "Freestyle",
+    "tilbud": "?",
+    "pris": "? kr"
+  },
+  {
+    "navn": "Annabella freestyle",
+    "storrelse": "S",
+    "farger": ["svart"],
+    "image": "Bilder/annabella1.jpeg",
+    "status": "tilgjengelig",
+    "eier": ["Annabella"],
+    "beskrivelse": "Svart freestyledrakt, liten str",
+    "type": "Freestyle",
+    "tilbud": "?",
+    "pris": "? kr"
+  },
+  {
+    "navn": "Annabella og Olea 2024",
+    "storrelse": "S",
+    "farger": ["svart", "rosa", "lilla", "blå"],
+    "image": "Bilder/aboleapar24.jpeg",
+    "status": "tilgjengelig",
+    "eier": ["Annabella", "Olea"],
+    "beskrivelse": "Svart, blå, lilla og rosa pardrakter med paljetter, liten str",
+    "type": "Par",
+    "tilbud": "?",
+    "pris": "? kr"
+  },
+  {
+    "navn": "Elida freestyle 2022",
+    "storrelse": "S",
+    "farger": ["lilla", "hvit", "sølv"],
+    "image": "Bilder/elida22.jpeg",
+    "status": "tilgjengelig",
+    "eier": ["Nora (L)"],
+    "beskrivelse": "Lilla freestyledrakt med lange ben og detaljer i hvit/sløv",
+    "type": "Freestyle",
+    "tilbud": "selge",
+    "pris": "1 500 kr"
+  },
+  {
+    "navn": "Nora (L) freestyle 2024",
+    "storrelse": "S",
+    "farger": ["rosa", "vinrød", "lilla"],
+    "image": "Bilder/nora24.jpeg",
+    "status": "tilgjengelig",
+    "eier": ["Nora (L)"],
+    "beskrivelse": "Rosa / vinrød freestyledrakt",
+    "type": "Freestyle",
+    "tilbud": "selge",
+    "pris": "500 kr"
   }
 ]
