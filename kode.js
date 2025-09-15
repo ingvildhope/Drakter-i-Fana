@@ -18,7 +18,7 @@ const drakter = [
     beskrivelse: "Svart troppsdrakt med ben og blonder (7 stk)",
     type: "Tropp",
     tilbud: "leie / selge",
-    pris: 650
+    pris: "650 / ? kr"
   },
   {
     navn: "Senior tropp 2024",
@@ -30,7 +30,7 @@ const drakter = [
     beskrivelse: "Svart og vinrød troppsdrakt (7 stk)",
     type: "Tropp",
     tilbud: "leie / selge",
-    pris: 650
+    pris: "650 / ? kr"
   },
   {
     navn: "Sofie freestyle 2024",
@@ -40,9 +40,9 @@ const drakter = [
     status: "ibruk",
     eier: ["Sofie"],
     beskrivelse: "Svart og rosa todelt freestyledrakt",
-    type: "freestyle",
-    tilbud: "leie / selge",
-    pris: 650
+    type: "Freestyle",
+    tilbud: "-",
+    pris: "-"
   },
   {
     navn: "Marie freestyle 2024",
@@ -52,9 +52,9 @@ const drakter = [
     status: "tilgjengelig",
     eier: ["Marie"],
     beskrivelse: "Rød freestyledrakt med detaljer i svart og gull",
-    type: "freestyle",
+    type: "Freestyle",
     tilbud: "Selge",
-    pris: 10000
+    pris: "? kr"
   },
   {
     navn: "Alida freestyle 2024",
@@ -64,9 +64,9 @@ const drakter = [
     status: "tilgjengelig",
     eier: ["Alida"],
     beskrivelse: "Grå og svart freestyledrakt",
-    type: "freestyle",
+    type: "Freestyle",
     tilbud: "leie / selge",
-    pris: 650
+    pris: "650 / ? kr"
   },
   {
     navn: "Senior par 2024",
@@ -78,7 +78,7 @@ const drakter = [
     beskrivelse: "Vinrød pardrakter med detaljer i gull",
     type: "Par",
     tilbud: "leie / selge",
-    pris: 650
+    pris: "650 / ? kr"
   },
   {
     navn: "Senior par 2023",
@@ -89,8 +89,8 @@ const drakter = [
     eier: ["Margrete, Sofie"],
     beskrivelse: "Blå og svarte pardrakter",
     type: "Par",
-    tilbud: "leie / selge",
-    pris: 650
+    tilbud: "-",
+    pris: "-"
   },
   {
     navn: "Junior par 2022",
@@ -101,8 +101,8 @@ const drakter = [
     eier: ["Tilda, Goda"],
     beskrivelse: "Grønne pardrakter med detaljer i gull",
     type: "Par",
-    tilbud: "leie / selge",
-    pris: 650
+    tilbud: "-",
+    pris: "-"
   },
   {
     navn: "Senior par 2022",
@@ -114,7 +114,7 @@ const drakter = [
     beskrivelse: "Svarte og blå pardrakter",
     type: "Par",
     tilbud: "leie / selge",
-    pris: 650
+    pris: "650 / ? kr"
   },
   {
     navn: "Alida freestyle 2022",
@@ -124,9 +124,9 @@ const drakter = [
     status: "ibruk",
     eier: ["Elida"],
     beskrivelse: "Rød freestyledrakt med detaljer i oransje",
-    type: "freestyle",
-    tilbud: "leie / selge",
-    pris: 650
+    type: "Freestyle",
+    tilbud: "-",
+    pris: "-"
   },
   {
     navn: "Alida freestyle 2023",
@@ -136,9 +136,9 @@ const drakter = [
     status: "tilgjengelig",
     eier: ["Alida"],
     beskrivelse: "Vinrød freestyledrakt med detaljer i sølv og rosa",
-    type: "freestyle",
+    type: "Freestyle",
     tilbud: "leie / selge",
-    pris: 650
+    pris: "650 / ? kr"
   },
   {
     navn: "Anna freestyle 2022",
@@ -148,9 +148,9 @@ const drakter = [
     status: "tilgjengelig",
     eier: ["Anna"],
     beskrivelse: "Svart freestyledrakt med detaljer i netting",
-    type: "freestyle",
+    type: "Freestyle",
     tilbud: "leie / selge",
-    pris: 650
+    pris: "650 / ? kr"
   },
   {
     navn: "Junior par 2019",
@@ -162,7 +162,7 @@ const drakter = [
     beskrivelse: "Hvite og brune pardrakter",
     type: "Par",
     tilbud: "leie / selge",
-    pris: 650
+    pris: "650 / ? kr"
   },
   {
     navn: "Margrete freestyle 2022",
@@ -172,9 +172,9 @@ const drakter = [
     status: "tilgjengelig",
     eier: ["Margrete"],
     beskrivelse: "Blå freestyledrakt med fine detaljer",
-    type: "freestyle",
+    type: "Freestyle",
     tilbud: "leie",
-    pris: 650
+    pris: "650 / ? kr"
   },
   {
     navn: "Margrete freestyle 2023",
@@ -184,9 +184,9 @@ const drakter = [
     status: "tilgjengelig",
     eier: ["Margrete"],
     beskrivelse: "Grønn freestyledrakt med detaljer i gull",
-    type: "freestyle",
+    type: "Freestyle",
     tilbud: "leie",
-    pris: 650
+    pris: "650 / ? kr"
   },
   {
     navn: "Sofie freestyle 2022",
@@ -194,11 +194,11 @@ const drakter = [
     farger: ["svart", "gull", "bronse"],
     image: "Bilder/sofie22.jpeg",
     status: "tilgjengelig",
-    eier: ["Sofie"],
+    eier: ["Goda ?"],
     beskrivelse: "Svart freestyledrakt med detaljer i gull og bronse",
-    type: "freestyle",
+    type: "Freestyle",
     tilbud: "leie / selge",
-    pris: 650
+    pris: "650 / ? kr"
   },
   {
     navn: "Sofie freestyle 2023",
@@ -208,9 +208,9 @@ const drakter = [
     status: "tilgjengelig",
     eier: ["Sofie"],
     beskrivelse: "Svart freestyledrakt med detaljer i grønn",
-    type: "freestyle",
+    type: "Freestyle",
     tilbud: "leie / selge",
-    pris: 650
+    pris: "650 / ? kr"
   },
   {
     navn: "Senior tropp 2023",
@@ -222,7 +222,7 @@ const drakter = [
     beskrivelse: "Brun troppsdrakt med ben og detaljer i rosa (7 stk)",
     type: "Tropp",
     tilbud: "leie / selge",
-    pris: 650
+    pris: "650 / ? kr"
   }
   
 ];
@@ -241,7 +241,7 @@ const dlg = document.getElementById('detailDialog');
 const dlgClose = document.getElementById('dlgClose');
 const dlgTitle = document.getElementById('dlgTitle');
 const dlgImg = document.getElementById('dlgImg');
-const dlgSize = document.getElementById('dlgSize');
+//const dlgSize = document.getElementById('dlgSize');
 const dlgTyp = document.getElementById('dlgTyp');
 const dlgOwn = document.getElementById('dlgOwn');
 const dlgPrice = document.getElementById('dlgPrice');
@@ -275,7 +275,7 @@ function renderCards(items) {
           <span>Eier: ${item.eier.join(', ')}</span>
           <span>Type: ${capitalize(item.type)}</span>
           <span>Tilbud: ${capitalize(item.tilbud)}</span>
-          <span>Pris: ${formatNOK(item.pris)}</span>
+          <span>Pris: ${item.pris}</span>
         </div>
         <div class="actions">
           <button class="btn">Detaljer</button>
@@ -320,15 +320,15 @@ function applyFiltersAndSort() {
     const matchesTyp = !typ || k.type === typ;
     //const matchesSize = !size || k.storrelse === size;
     const matchesStatus = !st || k.status === st;
-    return matchesQuery && matchesTyp && matchesSize && matchesStatus;
+    return matchesQuery && matchesTyp && matchesStatus; //matchesSize
   });
 
-  filtered = sortItems(filtered, sort);
+  //filtered = sortItems(filtered, sort);
   renderCards(filtered);
   updateStats(filtered);
 }
 
-function sortItems(items, sort) {
+/*function sortItems(items, sort) {
   const copy = [...items];
   switch (sort) {
     case 'prisAsc':
@@ -341,7 +341,7 @@ function sortItems(items, sort) {
     default:
       return copy;
   }
-}
+}*/
 
 // --- Dialog ------------------------------------------------------------
 function openDialog(item) {
@@ -350,7 +350,7 @@ function openDialog(item) {
   //dlgSize.textContent = item.storrelse;
   dlgTyp.textContent = item.type;
   dlgOwn.textContent = item.eier.join(', ');
-  dlgPrice.textContent = `${formatNOK(item.pris)}`;
+  dlgPrice.textContent = `${item.pris}`;
   dlgOff.textContent = item.tilbud;
   dlgStatus.textContent = labelForStatus(item.status);
   dlgStatus.className = `status ${item.status}`;
