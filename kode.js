@@ -47,6 +47,7 @@ const dlgDesc = document.getElementById('dlgDesc');
 
 // --- Rendering ---------------------------------------------------------
 function renderCards(items) {
+  updateStats(items);
   grid.innerHTML = '';
   items.forEach(item => {
     const card = document.createElement('article');
@@ -172,4 +173,3 @@ if (sortSel) sortSel.addEventListener('change', applyFiltersAndSort);
 
 // --- Init --------------------------------------------------------------
 renderCards(drakter);
-updateStats(drakter);
