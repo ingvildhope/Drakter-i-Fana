@@ -16,12 +16,12 @@
     "storrelse": "S",
     "farger": ["lilla", "rosa", "beige"],
     "image": "Bilder/margrete25.jpg",
-    "status": "tilgjengelig",
+    "status": "ibruk",
     "eier": ["Margrete"],
     "beskrivelse": "Beige freestyledrakt med masse blomsterdetaljer i lilla og rosa",
     "type": "Freestyle",
-    "tilbud": "leie / selge",
-    "pris": "650 / ? kr"
+    "tilbud": "-",
+    "pris": "-"
   },
   {
     "navn": "Madeleine freestyle 2025",
@@ -110,7 +110,7 @@
   {
     "navn": "Nora (L) freestyle 2024",
     "storrelse": "S",
-    "farger": ["rosa", "vinrød", "lilla"],
+    "farger": ["rosa", "vinrød"],
     "image": "Bilder/nora24.jpeg",
     "status": "tilgjengelig",
     "eier": ["Nora (L)"],
@@ -165,7 +165,7 @@
     "beskrivelse": "Grønn freestyledrakt med detaljer i gull",
     "type": "Freestyle",
     "tilbud": "leie",
-    "pris": "650 / ? kr"
+    "pris": "650 kr"
   },
   {
     "navn": "Sofie freestyle 2023",
@@ -213,7 +213,7 @@
     "beskrivelse": "Blå freestyledrakt med fine detaljer",
     "type": "Freestyle",
     "tilbud": "leie",
-    "pris": "650 / ? kr"
+    "pris": "650 kr"
   },
   {
     "navn": "Sofie freestyle 2022",
@@ -373,7 +373,7 @@
     "beskrivelse": "Beige pardrakter med detaljer i rød og svart",
     "type": "Par",
     "tilbud": "-",
-    "pris": "- kr"
+    "pris": "-"
   },
   {
     "navn": "Senior par 2024",
@@ -433,7 +433,7 @@
     "beskrivelse": "Blå og turkise pardrakter",
     "type": "Par",
     "tilbud": "selge",
-    "pris": "2400"
+    "pris": "2 400 kr"
   },
   {
     "navn": "Senior par EC 2022",
@@ -533,7 +533,7 @@
     "beskrivelse": "Rød og svart troppsdrakt (8 stk)",
     "type": "Tropp",
     "tilbud": "selge",
-    "pris": "2800 kr"
+    "pris": "2 800 kr"
   },
   {
     "navn": "Senior tropp 2025",
@@ -548,6 +548,18 @@
     "pris": "650 / ? kr"
   },
   {
+    "navn": "Rekrutt tropp 2025",
+    "storrelse": "S",
+    "farger": ["svart", "oransje"],
+    "image": "Bilder/rekruttropp25.jpeg",
+    "status": "tilgjengelig",
+    "eier": ["Ingrid", "Annabella", "Olea", "Synne", "Lilli", "Emilia", "Mathilde Kanutte"],
+    "beskrivelse": "Svart troppsdrakt med detaljer i oransje (7 stk)",
+    "type": "Tropp",
+    "tilbud": "?",
+    "pris": "? kr"
+  },
+  {
     "navn": "Junior tropp 2024",
     "storrelse": "S",
     "farger": ["grønn", "rosa"],
@@ -557,7 +569,7 @@
     "beskrivelse": "Grønn og rosa troppsdrakt (8 stk)",
     "type": "Tropp",
     "tilbud": "selge",
-    "pris": "1800 kr"
+    "pris": "1 800 kr"
   },
   {
     "navn": "Senior tropp 2024",
@@ -567,18 +579,6 @@
     "status": "tilgjengelig",
     "eier": ["Ingvild", "Anna", "Sofie", "Margrete", "Alida", "Nora", "Marie"],
     "beskrivelse": "Svart troppsdrakt med ben og blonder (7 stk)",
-    "type": "Tropp",
-    "tilbud": "leie / selge",
-    "pris": "650 / ? kr"
-  },
-  {
-    "navn": "Senior tropp 2024",
-    "storrelse": "S",
-    "farger": ["svart", "vinrød"],
-    "image": "Bilder/srtropp19.jpeg",
-    "status": "tilgjengelig",
-    "eier": ["Ingvild", "Anna", "Sofie", "Margrete", "Alida", "Nora", "Sofia"],
-    "beskrivelse": "Svart og vinrød troppsdrakt (7 stk)",
     "type": "Tropp",
     "tilbud": "leie / selge",
     "pris": "650 / ? kr"
@@ -620,16 +620,16 @@
     "pris": "650 / ? kr"
   },
   {
-    "navn": "Rekrutt tropp 2025",
+    "navn": "Senior tropp 2019",
     "storrelse": "S",
-    "farger": ["svart", "oransje"],
-    "image": "Bilder/rekruttropp25.jpeg",
+    "farger": ["svart", "vinrød"],
+    "image": "Bilder/srtropp19.jpeg",
     "status": "tilgjengelig",
-    "eier": ["Ingrid", "Annabella", "Olea", "Synne", "Lilli", "Emilia", "Mathilde Kanutte"],
-    "beskrivelse": "Svart troppsdrakt med detaljer i oransje (7 stk)",
+    "eier": ["Ingvild", "Anna", "Sofie", "Sofia", "Alida", "Ukjent klubb x2"],
+    "beskrivelse": "Svart og vinrød troppsdrakt (7 stk)",
     "type": "Tropp",
-    "tilbud": "?",
-    "pris": "? kr"
+    "tilbud": "leie / selge",
+    "pris": "650 / ? kr"
   },
   {
     "navn": "Junior tropp 2018",
