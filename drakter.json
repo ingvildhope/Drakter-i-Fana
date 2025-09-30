@@ -180,6 +180,18 @@
     "pris": "650 / ? kr"
   },
   {
+    "navn": "Ingvild freestyle 2022",
+    "storrelse": "S",
+    "farger": ["blå", "hvit", "gull"],
+    "image": "Bilder/ingvild22-1.jpeg",
+    "status": "ibruk",
+    "eier": ["Ingvild"],
+    "beskrivelse": "Lyseblå freestyledrakt med detaljer i hvit og gull",
+    "type": "Freestyle",
+    "tilbud": "-",
+    "pris": "-"
+  },
+  {
     "navn": "Alida freestyle 2022",
     "storrelse": "S",
     "farger": ["rød", "oransje"],
@@ -276,6 +288,30 @@
     "pris": "? kr"
   },
   {
+    "navn": "Ingvild freestyle 2019",
+    "storrelse": "S",
+    "farger": ["hvit", "blå", "lilla"],
+    "image": "Bilder/ingvild19-1.jpeg",
+    "status": "tilgjengelig",
+    "eier": ["Ingvild"],
+    "beskrivelse": "Hvit freestyledrakt med detaljer i blå og lilla",
+    "type": "Freestyle",
+    "tilbud": "leie",
+    "pris": "650 kr"
+  },
+  {
+    "navn": "Anna freestyle 2022",
+    "storrelse": "S",
+    "farger": ["blå", "grønn", "turkis"],
+    "image": "Bilder/anna19.jpeg",
+    "status": "ibruk",
+    "eier": ["Anna"],
+    "beskrivelse": "Blå freestyledrakt med detaljer i grønn og turkis",
+    "type": "Freestyle",
+    "tilbud": "-",
+    "pris": "-"
+  },
+  {
     "navn": "Margrete freestyle 2019",
     "storrelse": "S",
     "farger": ["grå", "rosa"],
@@ -300,6 +336,18 @@
     "pris": "? kr"
   },
   {
+    "navn": "Sofie freestyle 2018",
+    "storrelse": "S",
+    "farger": ["svart", "oransje"],
+    "image": "Bilder/sofie18.jpeg",
+    "status": "tilgjengelig",
+    "eier": ["Sofie"],
+    "beskrivelse": "Svart og oransje freestyledrakt",
+    "type": "Freestyle",
+    "tilbud": "leie / selge",
+    "pris": "650 / ? kr"
+  },
+  {
     "navn": "Nora freestyle 2018",
     "storrelse": "S",
     "farger": ["brun", "gul", "blå"],
@@ -322,6 +370,30 @@
     "type": "Freestyle",
     "tilbud": "?",
     "pris": "? kr"
+  },
+  {
+    "navn": "Ingvild freestyle 2016",
+    "storrelse": "S",
+    "farger": ["gull"],
+    "image": "Bilder/ingvild16.jpeg",
+    "status": "tilgjengelig",
+    "eier": ["Ingvild"],
+    "beskrivelse": "Gull freestyledrakt",
+    "type": "Freestyle",
+    "tilbud": "leie / selge",
+    "pris": "300 / 500 kr"
+  },
+  {
+    "navn": "Sofie freestyle 2015 ? ",
+    "storrelse": "S",
+    "farger": ["rosa", "svart"],
+    "image": "Bilder/sofie15.jpeg",
+    "status": "tilgjengelig",
+    "eier": ["Sofie"],
+    "beskrivelse": "Rosa og svart freestyledrakt med paljetter",
+    "type": "Freestyle",
+    "tilbud": "leie / selge",
+    "pris": "? / ? kr"
   },
   {
     "navn": "Rosa freestyle",
@@ -472,18 +544,6 @@
     "pris": "-"
   },
   {
-    "navn": "Senior par 2021",
-    "storrelse": "S",
-    "farger": ["hvit", "blå"],
-    "image": "Bilder/srpar21.jpeg",
-    "status": "tilgjengelig",
-    "eier": ["Nora", "Alida"],
-    "beskrivelse": "Hvite og blå pardrakter",
-    "type": "Par",
-    "tilbud": "leie",
-    "pris": "650 kr"
-  },
-  {
     "navn": "Junior par 2019",
     "storrelse": "S",
     "farger": ["hvit", "brun"],
@@ -496,7 +556,19 @@
     "pris": "650 kr"
   },
   {
-    "navn": "Junior par 2018",
+    "navn": "Senior par 2019",
+    "storrelse": "S",
+    "farger": ["hvit", "blå"],
+    "image": "Bilder/srpar21.jpeg",
+    "status": "tilgjengelig",
+    "eier": ["Nora", "Alida"],
+    "beskrivelse": "Hvite og blå pardrakter",
+    "type": "Par",
+    "tilbud": "leie",
+    "pris": "650 kr"
+  },
+  {
+    "navn": "Junior par VM 2018",
     "storrelse": "S",
     "farger": ["grå", "blå", "sølv"],
     "image": "Bilder/jrpar18.jpeg",
@@ -506,6 +578,54 @@
     "type": "Par",
     "tilbud": "leie",
     "pris": "650 kr"
+  },
+  {
+    "navn": "Junior par EC 2018",
+    "storrelse": "S",
+    "farger": ["rosa", "svart"],
+    "image": "Bilder/jrparec18.jpeg",
+    "status": "tilgjengelig",
+    "eier": ["Margrete", "Hanna Sol"],
+    "beskrivelse": "Rosa og svarte pardrakter",
+    "type": "Par",
+    "tilbud": "leie / selge",
+    "pris": "650 / ? kr"
+  },
+  {
+    "navn": "Junior par 2018",
+    "storrelse": "S",
+    "farger": ["rød", "gull"],
+    "image": "Bilder/impar18.jpeg",
+    "status": "tilgjengelig",
+    "eier": ["Ingvild", "Maren"],
+    "beskrivelse": "Røde pardrakter med detaljer i gull",
+    "type": "Par",
+    "tilbud": "leie / selge",
+    "pris": "400 / 650 kr"
+  },
+  {
+    "navn": "Anna og Ingvild par",
+    "storrelse": "S",
+    "farger": ["lilla", "rosa", "gull"],
+    "image": "Bilder/imapar.jpeg",
+    "status": "tilgjengelig",
+    "eier": ["Ingvild", "Anna", "Maren?"],
+    "beskrivelse": "Lilla pardrakter med detaljer i rosa og gull",
+    "type": "Par",
+    "tilbud": "leie / selge",
+    "pris": "300 / 500 kr"
+  },
+  {
+    "navn": "Lilla par",
+    "storrelse": "S",
+    "farger": ["lilla"],
+    "image": "Bilder/lillapar.jpeg",
+    "status": "ibruk",
+    "eier": ["Tilda"],
+    "beskrivelse": "Lilla pardrakter",
+    "type": "Par",
+    "tilbud": "-",
+    "pris": "-"
   },
   {
     "navn": "Mina og ? par ?",
@@ -667,6 +787,19 @@
     "tilbud": "?",
     "pris": "? kr"
   },
+  {
+    "navn": "Sjakk tropp",
+    "storrelse": "S",
+    "farger": ["svart", "hvit"],
+    "image": "Bilder/sjakkdrakt.jpeg",
+    "status": "tilgjengelig",
+    "eier": ["Ingvild", "Maren", "?", "Viking"],
+    "beskrivelse": "Svarte og hvite troppsdrakter (4 stk)",
+    "type": "Tropp",
+    "tilbud": "?",
+    "pris": "? kr"
+  },
+
 
 
 
@@ -681,5 +814,33 @@
     "type": "Oblig",
     "tilbud": "selge",
     "pris": "150 kr"
+  },
+
+
+
+
+  {
+    "navn": "Ingvild one baton 2022",
+    "storrelse": "S",
+    "farger": ["grønn", "gul", "neon"],
+    "image": "Bilder/ingvildob.jpg",
+    "status": "tilgjengelig",
+    "eier": ["Ingvild"],
+    "beskrivelse": "Grønn one baton drakt med detaljer i neon gul",
+    "type": "One Baton",
+    "tilbud": "leie / selge",
+    "pris": "650 / 900 kr"
+  },
+  {
+    "navn": "Ingvild one baton 2017",
+    "storrelse": "S",
+    "farger": ["blå", "grønn", "gul"],
+    "image": "Bilder/ingvildob17.jpeg",
+    "status": "tilgjengelig",
+    "eier": ["Ingvild"],
+    "beskrivelse": "Blå og grønn one baton drakt med frynser",
+    "type": "One Baton",
+    "tilbud": "leie / selge",
+    "pris": "500 / 750 kr"
   }
 ]
