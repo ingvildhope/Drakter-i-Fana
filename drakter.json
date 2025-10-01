@@ -100,7 +100,7 @@
     "storrelse": "S",
     "farger": ["svart", "sølv", "grå"],
     "image": "Bilder/alida24.jpg",
-    "status": "tilgjengelig",
+    "status": "ibruk",
     "eier": ["Alida"],
     "beskrivelse": "Grå og svart freestyledrakt",
     "type": "Freestyle",
