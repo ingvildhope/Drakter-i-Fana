@@ -14,11 +14,11 @@
   {
     "navn": "Margrete freestyle 2025",
     "storrelse": "S",
-    "farger": ["lilla", "rosa", "beige"],
+    "farger": ["lilla", "rosa", "hvit", "beige"],
     "image": "Bilder/margrete25.jpg",
     "status": "ibruk",
     "eier": ["Margrete"],
-    "beskrivelse": "Beige freestyledrakt med masse blomsterdetaljer i lilla og rosa",
+    "beskrivelse": "Beige freestyledrakt med masse blomsterdetaljer i lilla, rosa og hvit",
     "type": "Freestyle",
     "tilbud": "-",
     "pris": "-"
