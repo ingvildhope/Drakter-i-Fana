@@ -832,6 +832,42 @@
     "pris": "650 / 900 kr"
   },
   {
+    "navn": "Alida one baton 2022",
+    "storrelse": "S",
+    "farger": ["grå", "rosa"],
+    "image": "Bilder/alidaob.jpeg",
+    "status": "tilgjengelig",
+    "eier": ["Alida"],
+    "beskrivelse": "Grå one baton drakt med detaljer i rosa",
+    "type": "One Baton",
+    "tilbud": "leie / selge",
+    "pris": "650 / ? kr"
+  },
+  {
+    "navn": "Nora one baton 2018",
+    "storrelse": "S",
+    "farger": ["blå", "hvit"],
+    "image": "Bilder/noraob.jpeg",
+    "status": "ibruk",
+    "eier": ["Nora"],
+    "beskrivelse": "Blå one baton drakt med detaljer i hvit",
+    "type": "One Baton",
+    "tilbud": "-",
+    "pris": "-"
+  },
+  {
+    "navn": "Sofia one baton 2018",
+    "storrelse": "S",
+    "farger": ["blå", "grønn"],
+    "image": "Bilder/sofiaob.jpeg",
+    "status": "tilgjengelig",
+    "eier": ["Margrete"],
+    "beskrivelse": "Blå one baton drakt med detaljer i grønn",
+    "type": "One Baton",
+    "tilbud": "leie / selge",
+    "pris": "650 / ? kr"
+  },
+  {
     "navn": "Ingvild one baton 2017",
     "storrelse": "S",
     "farger": ["blå", "grønn", "gul"],
