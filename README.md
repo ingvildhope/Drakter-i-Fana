@@ -5,4 +5,4 @@
     * *Email:* ingvildhrh@gmail.com
 
 * **Tilgjengelig på:**
-https://fana.batontwirl.no/
+https://fana.drakter.batontwirl.no/
