@@ -160,12 +160,12 @@
     "storrelse": "S",
     "farger": ["grønn", "gull"],
     "image": "Bilder/margrete23.jpeg",
-    "status": "tilgjengelig",
-    "eier": ["Margrete"],
+    "status": "ibruk",
+    "eier": ["Meline"],
     "beskrivelse": "Grønn freestyledrakt med detaljer i gull",
     "type": "Freestyle",
-    "tilbud": "leie",
-    "pris": "650 kr"
+    "tilbud": "-",
+    "pris": "-"
   },
   {
     "navn": "Sofie freestyle 2023",
@@ -264,6 +264,18 @@
     "pris": "650 / 800 kr"
   },
   {
+    "navn": "Sofie freestyle 2021",
+    "storrelse": "S",
+    "farger": ["grå", "sølv", "svart"],
+    "image": "Bilder/sofie21.jpeg",
+    "status": "tilgjengelig",
+    "eier": ["Meline"],
+    "beskrivelse": "Grå / sølv freestyledrakt med detaljer i svart",
+    "type": "Freestyle",
+    "tilbud": "?",
+    "pris": "? kr"
+  },
+  {
     "navn": "Margrete freestyle 2021",
     "storrelse": "S",
     "farger": ["hvit", "sølv"],
@@ -286,6 +298,18 @@
     "type": "Freestyle",
     "tilbud": "?",
     "pris": "? kr"
+  },
+  {
+    "navn": "Ingvild freestyle 2021",
+    "storrelse": "S",
+    "farger": ["grønn", "hvit", "blå", "teal"],
+    "image": "Bilder/ingvild21.jpg",
+    "status": "tilgjengelig",
+    "eier": ["Ingvild"],
+    "beskrivelse": "Grønn / blå freestyledrakt med detaljer i hvit",
+    "type": "Freestyle",
+    "tilbud": "leie",
+    "pris": "650 kr"
   },
   {
     "navn": "Ingvild freestyle 2019",
@@ -336,6 +360,18 @@
     "pris": "? kr"
   },
   {
+    "navn": "Alida freestyle 2019",
+    "storrelse": "S",
+    "farger": ["rød", "svart"],
+    "image": "Bilder/alida19.jpg",
+    "status": "tilgjengelig",
+    "eier": ["Alida"],
+    "beskrivelse": "Rød freestyledrakt med detaljer i svart og lange ben",
+    "type": "Freestyle",
+    "tilbud": "leie / selge",
+    "pris": "650 / ? kr"
+  },
+  {
     "navn": "Sofie freestyle 2018",
     "storrelse": "S",
     "farger": ["svart", "oransje"],
@@ -346,6 +382,18 @@
     "type": "Freestyle",
     "tilbud": "leie / selge",
     "pris": "650 / ? kr"
+  },
+  {
+    "navn": "Alida freestyle 2018",
+    "storrelse": "S",
+    "farger": ["burgunder", "vinrød", "sølv"],
+    "image": "Bilder/alida18.jpg",
+    "status": "tilgjengelig",
+    "eier": ["Sandra"],
+    "beskrivelse": "Burgunder / vinrød freestyledrakt med detaljer i sølv",
+    "type": "Freestyle",
+    "tilbud": "selge",
+    "pris": "? kr"
   },
   {
     "navn": "Nora freestyle 2018",
@@ -365,11 +413,35 @@
     "farger": ["lilla", "hvit"],
     "image": "Bilder/nora17.jpeg",
     "status": "tilgjengelig",
-    "eier": ["Nora"],
+    "eier": ["Sandra"],
     "beskrivelse": "Lilla og hvit freestyledrakt",
     "type": "Freestyle",
-    "tilbud": "?",
+    "tilbud": "selge",
     "pris": "? kr"
+  },
+  {
+    "navn": "Alida freestyle 2017",
+    "storrelse": "S",
+    "farger": ["blå"],
+    "image": "Bilder/alida17.jpg",
+    "status": "tilgjengelig",
+    "eier": ["Alida"],
+    "beskrivelse": "Lyseblå freestyledrakt med lange ben",
+    "type": "Freestyle",
+    "tilbud": "leie / selge",
+    "pris": "650 / ? kr"
+  },
+  {
+    "navn": "Alida freestyle 2016",
+    "storrelse": "S",
+    "farger": ["beige", "brun", "hvit"],
+    "image": "Bilder/alida16.jpeg",
+    "status": "tilgjengelig",
+    "eier": ["Alida"],
+    "beskrivelse": "Beige freestyledrakt med detaljer i brun og hvit",
+    "type": "Freestyle",
+    "tilbud": "leie / selge",
+    "pris": "650 / ? kr"
   },
   {
     "navn": "Ingvild freestyle 2016",
@@ -604,6 +676,18 @@
     "pris": "400 / 650 kr"
   },
   {
+    "navn": "Junior par 2017",
+    "storrelse": "S",
+    "farger": ["svart", "blå"],
+    "image": "Bilder/jrpar17.jpg",
+    "status": "tilgjengelig",
+    "eier": ["Nora", "Alida"],
+    "beskrivelse": "Svarte pardrakter med detaljer i blå",
+    "type": "Par",
+    "tilbud": "leie / selge",
+    "pris": "? / ? kr"
+  },
+  {
     "navn": "Anna og Ingvild par",
     "storrelse": "S",
     "farger": ["lilla", "rosa", "gull"],
@@ -802,7 +886,30 @@
 
 
 
-
+  {
+    "navn": "Alida oblig 1",
+    "storrelse": "S",
+    "farger": ["blå", "hvit", "rød"],
+    "image": "Bilder/alidaoblig1.jpg",
+    "status": "tilgjengelig",
+    "eier": ["Alida"],
+    "beskrivelse": "Blå, hvit og rød obligdrakt",
+    "type": "Oblig",
+    "tilbud": "selge",
+    "pris": "? kr"
+  },
+  {
+    "navn": "Alida oblig 2",
+    "storrelse": "S",
+    "farger": ["svart"],
+    "image": "Bilder/alidaoblig2.jpg",
+    "status": "tilgjengelig",
+    "eier": ["Alida"],
+    "beskrivelse": "Svart obligdrakt med flagg på hoften",
+    "type": "Oblig",
+    "tilbud": "selge",
+    "pris": "? kr"
+  },
   {
     "navn": "Mina oblig 1",
     "storrelse": "S",
@@ -836,12 +943,12 @@
     "storrelse": "S",
     "farger": ["grå", "rosa"],
     "image": "Bilder/alidaob.jpeg",
-    "status": "tilgjengelig",
-    "eier": ["Alida"],
+    "status": "ibruk",
+    "eier": ["Meline"],
     "beskrivelse": "Grå one baton drakt med detaljer i rosa",
     "type": "One Baton",
-    "tilbud": "leie / selge",
-    "pris": "650 / ? kr"
+    "tilbud": "-",
+    "pris": "-"
   },
   {
     "navn": "Nora one baton 2018",
